@@ -16,4 +16,4 @@
         4. 如何判断对象是否可以被回收？
         5. JVM如何排查现场问题，在没有线上排查工具的时候排查过程是什么样的？
         
-   - [JVM内存模型](http://github.com/xkl700/NotDoCRUD/JVM/JVMMemoryModel.md)
+   - [JVM内存模型](https://github.com/xkl700/NotDoCRUD/blob/master/JVM/JVMMemoryModel.md)
