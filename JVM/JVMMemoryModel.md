@@ -193,25 +193,40 @@ static代码只在类初始化时加载一次，加载后存在元空间，而�
 > [Java HotSpot VM Command-Line Options](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts001.html#CHDJEIHC)
 >
 > [JVM - 结合代码示例彻底搞懂Java内存区域_对象在堆-栈-方法区(元空间)之间的关系](https://blog.csdn.net/yangshangwei/article/details/106893464?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242)
+> 
 > JVM常用参数
+>
 > -XX:MaxMetaspaceSize 元空间最大值，默认是没有限制的。
+>
 > -XX:MetaspaceSize 元空间初始空间大小，达到该值就会触发垃圾收集进行类型卸载，同时GC会对该值进行调整
+>
 > -Xms256m 设置最小堆内存
+>
 > -Xmx512m 设置最大堆内存
+>
 > -Xss128k 每个线程堆栈大小，默认256K，减少此数值产生更多线程
+>
 > -Xmn300m (-XX:NewSize) 设置年轻代内存
+>
 > -XX:NewRatio 设置年轻代和老年代的比值，如：3 表示年轻代与老年代的比值为1:3
+>
 > -XX:SurvivorRatio 年轻代中eden区与两个survivor区的比,默认8，即edan:s0:s1=8:1:1
+>
 > -XX:TargetSurvivorRatio=60 如果Survivor空间的占用超过该设定值，对象在未达到他们的最大年龄
-  之前就会被提升至老年代。默认值为50，即超过50%的进入老年代
+> 之前就会被提升至老年代。默认值为50，即超过50%的进入老年代
+>
 > -XX:+PrintGCDetails 打印GC详情 -XX:+PrintGC 与 -verbose:gc 打印GC简略信息
+>
 > -XX:+PrintCommandLineFlags 打印JVM使用的参数
+>
 > -XX:MaxTenuringThreshold=3 设置对象在年轻代中经历多少次GC后进入老年代，默认15(0-15之间)
   CMS收集器默认为6
+>
 > -Xloggc:C:\Users\30748\Desktop\JVMTestGC.log 指定GClog存放位置
+>
 > -XX:+HeapDumpOnOutOfMemoryError 堆溢出时dump hprof格式文件
+>
 > -XX:HeapDumpPath=C:\Users\30748\java_error_in_idea.hprof 堆溢出文件位置
-
 
 ## GC
 
