@@ -15,5 +15,10 @@
         3. JVM的垃圾回收算法有哪些，分别干什么的？
         4. 如何判断对象是否可以被回收？
         5. JVM如何排查现场问题，在没有线上排查工具的时候排查过程是什么样的？
+    
+> 对于JVM的学习我主要通过以下几个方式：
+> - [老K的JAVA博客](https://javakk.com/category/jvm) ：通过百度Metaspace的时候发现的老K的博客，发现有很多JVM调优相关的文章，真的是干货满满
+> - [Hollis-Blog](https://www.hollischuang.com/?s=JVM) Hollis神就不用多说了，很久之前就一直在关注Hollis神的Blog
+> - [黄小邪的书单](https://blog.csdn.net/a724888/category_9274218.html) 哈哈，小邪据说是前阿里的大佬，不过发现小邪的书单真的是个意外
         
    - [JVM内存模型](https://github.com/xkl700/NotDoCRUD/blob/master/JVM/JVMMemoryModel.md)
