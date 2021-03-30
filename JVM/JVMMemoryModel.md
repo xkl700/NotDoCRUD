@@ -326,7 +326,7 @@ GC 需要做 3 件事情：
 <td><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xNTQ2MjA1Ny00OWJmZDZjNDY3ODg1NjUzLmpwZw?x-oss-process=image/format.png" alt="标记-清除-整理算法" style="zoom:50%;" /></td>
 </tr></table>
 
-4）分代回收算法
+- 分代回收算法
 
 实际上在讲解复制算法时已经涉及到了分代回收的内容，这种算法根据对象存活周期的不同将内存划分为几块，Java中主要是新生代、年老代**。这样就可以根据各个年代的特点，采用合适的收集算法了，在文顶的图中已经标示，新生代采用了复制算法，而老年代采用了整理算法，这里就不再赘述。**
 
