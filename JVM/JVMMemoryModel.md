@@ -348,7 +348,7 @@ GC 需要做 3 件事情：
 
 其工作示意图如下：
 
-![img](https:////upload-images.jianshu.io/upload_images/15462057-442a9338f2e3696b.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![image-20210331141631731](https://i.loli.net/2021/03/31/LBYupE17vr9bMHk.png)
 
 - **ParNew（新生代-并行-收集器）**是一个Stop-the-World，复制使用多个GC线程的收集器
 
@@ -358,7 +358,7 @@ GC 需要做 3 件事情：
 
     示意图如下：
 
-    ![img](https:////upload-images.jianshu.io/upload_images/15462057-50f0d6917e663ed9.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+    ![image-20210331141613951](https://i.loli.net/2021/03/31/zX8jl4pryHiKFgU.png)
 
 - **Parallel Scavenge （新生代-并行-收集器）**是一个停止世界，复制使用多个GC线程的收集器
 
@@ -383,7 +383,7 @@ CMS是一款以**获取最短回收停顿时间**为目标的收集器(多并发
 
 其收集过程如下图所示：
 
-![img](https:////upload-images.jianshu.io/upload_images/15462057-b85e962922858c89.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![](https://i.loli.net/2021/03/31/zlKGYRVpsIU1qah.png)
 
 如图所示，在初始标记和重新标记两个步骤，也会和Serial 一样暂停所有用户线程。
 
@@ -415,3 +415,22 @@ CMS是一款以**获取最短回收停顿时间**为目标的收集器(多并发
 > [《一张图看懂JVM之垃圾回收器详解》](https://www.jianshu.com/p/db158c758f67)原文连接没有找到，这里放一个转载链接
 >
 > [深入理解JVM虚拟机3：垃圾回收器详解](https://blog.csdn.net/a724888/article/details/78764006)
+
+#### 年轻代GC流程
+
+在回过头来看一下年轻代的GC流程：
+
+![image-20210327223448634](https://i.loli.net/2021/03/27/MHqPGleLkrTisNF.png)
+
+对象先进入edan区
+
+edan gc后存活对象进入from区，并清空edan
+
+edan满后 from 和edan gc，存活对象进入to区，并清空edan和from
+
+from和to概念调换，持续执行gc（即form现在是to，to为form）
+对象头分代年龄大于15后被已入old
+
+如果一次回收中，survivor空间不足，超出部分分配到老年代
+
+注意：survicor中存活的对象大于servivor空间的50%后会直接进入老年代

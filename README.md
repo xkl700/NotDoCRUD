@@ -22,3 +22,28 @@
 > - [黄小邪的书单](https://blog.csdn.net/a724888/category_9274218.html) 哈哈，小邪据说是前阿里的大佬，不过发现小邪的书单真的是个意外
         
    - [JVM内存模型](https://github.com/xkl700/NotDoCRUD/blob/master/JVM/JVMMemoryModel.md)
+
+## JDK1.8 源码阅读
+
+> 本次阅读JDK版本基于 [Alibaba_Dragonwell_8.5.4-GA](https://github.com/alibaba/dragonwell8/releases) 
+
+### 阅读前准备
+
+- 下载安装 [Alibaba_Dragonwell_8.5.4-GA](https://github.com/alibaba/dragonwell8/releases)，并解压jdk目录下src.zip 
+
+  - src.zip 即 jdk source code 压缩目录
+- 使用开发工具打开解压后src目录即可，个人推荐使用IDEA
+- 找准主线
+
+### 阅读顺序
+
+- [String]()
+- [Integer]()
+- [Long]()
+- [Enum]()
+- [BigDecimal]()
+- [ThreadLocal]()
+- [ClassLoader&URLClassLoader]()
+- [ArrayList&LinkedList]()
+- [HashMap&LinkedHashMap&TreeMap&CouncurrentHashMap]()
+- [HashSet&LinkedHashSet&TreeSet]()
