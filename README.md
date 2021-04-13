@@ -37,13 +37,13 @@
 
 ### 阅读顺序
 
-- [String]()
-- [Integer]()
-- [Long]()
-- [Enum]()
+- [String](https://github.com/xkl700/NotDoCRUD/blob/master/JDK/String.md)
+- [Integer](https://github.com/xkl700/NotDoCRUD/blob/master/JDK/Integer.md)
+- [Long](https://github.com/xkl700/NotDoCRUD/blob/master/JDK/Long.md)
+- [Enum](https://github.com/xkl700/NotDoCRUD/blob/master/JDK/Enum.md)
 - [BigDecimal]()
 - [ThreadLocal]()
 - [ClassLoader&URLClassLoader]()
 - [ArrayList&LinkedList]()
-- [HashMap&LinkedHashMap&TreeMap&CouncurrentHashMap]()
-- [HashSet&LinkedHashSet&TreeSet]()
+- [HashMap&LinkedHashMap&TreeMap&CouncurrentHashMap](https://github.com/xkl700/NotDoCRUD/blob/master/JDK/HashMap.md)
+- [HashSet&LinkedHashSet&TreeSet](https://github.com/xkl700/NotDoCRUD/blob/master/JDK/HashSet.md)
